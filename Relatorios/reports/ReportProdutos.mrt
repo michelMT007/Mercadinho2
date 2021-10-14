@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9Fybz01KctX5CE2Y4gCxJ9Eo0UhIeruk7Uzt7eFMaS/FVMvr0Xv73eJGjb3DdKSvw3D7jEVZw9VrR9XsY3hhe/lg2c/GA0INaUZdmPL4qGfgVlMC2VFz3eEV/aX5afZe42rVwg==</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <Categoria Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Categoria</Alias>
+        <Columns isList="true" count="2">
+          <value>Id,System.Int32</value>
+          <value>CategoriaProduto,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>61d56c505cc24b08809f5fe969b59868</Key>
+        <Name>Categoria</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Categoria</SqlCommand>
+      </Categoria>
+      <Produtos Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>Produtos</Alias>
+        <Columns isList="true" count="6">
+          <value>Id,System.Int32</value>
+          <value>Preco,System.Decimal</value>
+          <value>FKId,System.Int32</value>
+          <value>BarCode,System.String</value>
+          <value>Nome,System.String</value>
+          <value>Descricao,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>a50ae316924b441a86e8f728449fd09e</Key>
+        <Name>Produtos</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>select * from Produtos</SqlCommand>
+      </Produtos>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>9d29754d01d34c009d9d768fc3d18bac</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="6" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,0.8</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageHeaderBand1>
+        <DataProdutos Ref="7" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,2,19,2.4</ClientRectangle>
+          <ColumnCount>6</ColumnCount>
+          <Components isList="true" count="18">
+            <DataProdutos_Cell1 Ref="8" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell1</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Código unico
+</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell1>
+            <DataProdutos_Cell2 Ref="9" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell2</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Preco</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell2>
+            <DataProdutos_Cell3 Ref="10" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,0,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell3</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Categoria do Produto</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell3>
+            <DataProdutos_Cell4 Ref="11" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.6,0,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell4</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Código de barras
+</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell4>
+            <DataProdutos_Cell5 Ref="12" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,0,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell5</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Nome</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell5>
+            <DataProdutos_Cell6 Ref="13" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,0,3,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell6</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Descricao</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell6>
+            <DataProdutos_Cell7 Ref="14" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.8,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell7</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Produtos.Id}</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell7>
+            <DataProdutos_Cell8 Ref="15" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.2,0.8,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <ID>7</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell8</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Produtos.Preco}</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell8>
+            <DataProdutos_Cell9 Ref="16" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.4,0.8,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <ID>8</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell9</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Produtos.FKId}</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell9>
+            <DataProdutos_Cell10 Ref="17" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.6,0.8,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <ID>9</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell10</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Produtos.BarCode}</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell10>
+            <DataProdutos_Cell11 Ref="18" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.8,0.8,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <ID>10</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell11</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Produtos.Nome}</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell11>
+            <DataProdutos_Cell12 Ref="19" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16,0.8,3,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <ID>11</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell12</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>{Produtos.Descricao}</Text>
+              <TextBrush>[193:152:89]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataProdutos_Cell12>
+            <DataProdutos_Cell13 Ref="20" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>12</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell13</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>[193:152:89]</TextBrush>
+            </DataProdutos_Cell13>
+            <DataProdutos_Cell14 Ref="21" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,1.6,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>13</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell14</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>[193:152:89]</TextBrush>
+            </DataProdutos_Cell14>
+            <DataProdutos_Cell15 Ref="22" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.4,1.6,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>14</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell15</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>[193:152:89]</TextBrush>
+            </DataProdutos_Cell15>
+            <DataProdutos_Cell16 Ref="23" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.6,1.6,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>15</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell16</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>[193:152:89]</TextBrush>
+            </DataProdutos_Cell16>
+            <DataProdutos_Cell17 Ref="24" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,1.6,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>16</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell17</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>[193:152:89]</TextBrush>
+            </DataProdutos_Cell17>
+            <DataProdutos_Cell18 Ref="25" type="TableCell" isKey="true">
+              <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16,1.6,3,0.8</ClientRectangle>
+              <ComponentStyle>Flaxen_Data1</ComponentStyle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <ID>17</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>DataProdutos_Cell18</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>[193:152:89]</TextBrush>
+            </DataProdutos_Cell18>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>Produtos</DataSourceName>
+          <EvenStyle>Flaxen_Data1_Even Style</EvenStyle>
+          <FilterMode>Or</FilterMode>
+          <Filters isList="true" count="1">
+            <value>FKId,Between,,,Numeric</value>
+          </Filters>
+          <FooterRowsCount>1</FooterRowsCount>
+          <HeaderRowsCount>1</HeaderRowsCount>
+          <Name>DataProdutos</Name>
+          <NumberID>18</NumberID>
+          <OddStyle>Flaxen_Data1_Odd Style</OddStyle>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <RowCount>3</RowCount>
+          <Sort isList="true" count="0" />
+        </DataProdutos>
+        <GroupFooterProdutos1 Ref="26" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5.2,19,0.4</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterProdutos1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupFooterProdutos1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>a46bc3e291604311bef8df90032de4c5</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>10/13/2021 7:59:35 PM</ReportChanged>
+  <ReportCreated>10/13/2021 7:45:36 PM</ReportCreated>
+  <ReportFile>C:\estudos\WebApplication1\Relatorios\reports\ReportProdutos.mrt</ReportFile>
+  <ReportGuid>b8362b458d4b4d94a8e16f4e868747e8</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2019.4.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="12">
+    <Flaxen_Report_Title1 Ref="27" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item27 Ref="28" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item27>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Flaxen_Report_Title1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Report_Title1>
+    <Flaxen_Report_Title2 Ref="29" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item29 Ref="30" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item29>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Flaxen_Report_Title2</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Report_Title2>
+    <Flaxen_Report_Summary Ref="31" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item31 Ref="32" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item31>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Flaxen_Report_Summary</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Report_Summary>
+    <Flaxen_Page_Header Ref="33" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item33 Ref="34" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item33>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Flaxen_Page_Header</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Page_Header>
+    <Flaxen_Page_Footer Ref="35" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item35 Ref="36" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item35>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Flaxen_Page_Footer</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Page_Footer>
+    <Flaxen_Group_Header1 Ref="37" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item37 Ref="38" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item37>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Flaxen_Group_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Group_Header1>
+    <Flaxen_Group_Footer1 Ref="39" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item39 Ref="40" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item39>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Flaxen_Group_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Group_Footer1>
+    <Flaxen_Header1 Ref="41" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;[143:102:102];1;Solid;False;4;Black;True</Border>
+      <Brush>[242:234:221]</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item41 Ref="42" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item41>
+      </Conditions>
+      <Font>Arial,8,Bold</Font>
+      <Name>Flaxen_Header1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Header1>
+    <Flaxen_Data1 Ref="43" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item43 Ref="44" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item43>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Flaxen_Data1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Data1>
+    <Flaxen_Data1_Odd_x0020_Style Ref="45" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item45 Ref="46" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item45>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Flaxen_Data1_Odd Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Data1_Odd_x0020_Style>
+    <Flaxen_Data1_Even_x0020_Style Ref="47" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>[240:237:232]</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item47 Ref="48" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item47>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Flaxen_Data1_Even Style</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Data1_Even_x0020_Style>
+    <Flaxen_Footer1 Ref="49" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;[143:102:102];1;Solid;False;4;Black</Border>
+      <Brush>[242:234:221]</Brush>
+      <CollectionName>Flaxen</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item49 Ref="50" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item49>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Flaxen_Footer1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[193:152:89]</TextBrush>
+    </Flaxen_Footer1>
+  </Styles>
+</StiSerializer>

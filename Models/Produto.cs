@@ -12,6 +12,6 @@ namespace WebApplication1.Models
         public string Descricao { get; set; }
         public string BarCode { get; set; }
         public decimal Preco { get; set; }
-        public Categoria FK { get; set; } 
+        //public Categoria FK { get; set; } 
     }
 }
