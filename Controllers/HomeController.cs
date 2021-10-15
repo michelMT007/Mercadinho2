@@ -23,6 +23,10 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult Page()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

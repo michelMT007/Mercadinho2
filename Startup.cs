@@ -8,24 +8,25 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading.Tasks;
+using WebApplication1.Context;
 
 namespace WebApplication1
 {
     public class Startup
     {
-
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<ApplicationContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,9 +44,7 @@ namespace WebApplication1
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -53,12 +52,14 @@ namespace WebApplication1
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "produtos",
-                    pattern: "{controller=Produto}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Categorias}/{action=Index}/{id?}");
+
+                //endpoints.MapControllerRoute(
+                //    name: "produtos",
+                //    pattern: "{controller=Produto}/{action=Index}/{id?}");
+
+                //endpoints.MapControllerRoute(
+                //    name: "Categoria",
+                //    pattern: "{controller=Categorias}/{action=Index}/{id?}");
             });
         }
     }
